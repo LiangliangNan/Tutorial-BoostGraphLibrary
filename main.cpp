@@ -135,8 +135,8 @@ int main(int /*argc*/, char** /*argv*/) {
     //-----------------------------------------------------------------------
     //  access the neighboring vertices of a vertex
     //-----------------------------------------------------------------------
-    std::pair<AdjacencyIterator, AdjacencyIterator> adj_iter = boost::adjacent_vertices(vd1, graph);
-    for (AdjacencyIterator ait = adj_iter.first; ait != adj_iter.second; ++ait) {
+    std::pair<AdjacentVertexIterator, AdjacentVertexIterator> adj_iter = boost::adjacent_vertices(vd1, graph);
+    for (AdjacentVertexIterator ait = adj_iter.first; ait != adj_iter.second; ++ait) {
         VertexDescriptor vd = *ait;
         const VertexProperty&  vp = graph[vd];
         std::cout << "the vertex adjacent to vertex 1 has a value: " << vp.value << std::endl;
