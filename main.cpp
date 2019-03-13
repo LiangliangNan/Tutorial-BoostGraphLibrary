@@ -73,11 +73,13 @@ int main(int /*argc*/, char** /*argv*/) {
     //  access the vertex property given the vertex descriptor
     //-----------------------------------------------------------------------
     const VertexProperty& vp = graph[vd0];  // the vertex property of vertex 0
+    std::cout << "vertex value (v0): " << vp.value << std::endl;
 
     //-----------------------------------------------------------------------
     //  access the edge property given the edge descriptor
     //-----------------------------------------------------------------------
     const EdgeProperty& ep = graph[ed01];  // property of the edge between vertex 0 and 1
+    std::cout << "edge weight (v0 - v1): " << ep.weight << std::endl;
 
     //-----------------------------------------------------------------------
     //  traverse all the vertices of a graph
@@ -118,11 +120,8 @@ int main(int /*argc*/, char** /*argv*/) {
         const EdgeProperty&  ep = graph[ed];
         std::cout << "vertex 0 and 2 are connected by an edge. The edge weight is: " << ep.weight << std::endl;
      }
-    else {
-        EdgeDescriptor ed = test.first;
-        const EdgeProperty&  ep = graph[ed];
+    else
         std::cout << "vertex 0 and 2 are not connected by an edge." << std::endl;
-    }
 
     test = boost::edge(vd1, vd2, graph);
     if (test.second == true) {
@@ -130,11 +129,8 @@ int main(int /*argc*/, char** /*argv*/) {
         const EdgeProperty&  ep = graph[ed];
         std::cout << "vertex 1 and 2 are connected by an edge. The edge weight is: " << ep.weight << std::endl;
      }
-    else {
-        EdgeDescriptor ed = test.first;
-        const EdgeProperty&  ep = graph[ed];
+    else
         std::cout << "vertex 1 and 2 are not connected by an edge." << std::endl;
-    }
 
     //-----------------------------------------------------------------------
     //  access the neighboring vertices of a vertex
