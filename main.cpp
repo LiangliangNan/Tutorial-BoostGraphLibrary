@@ -136,7 +136,7 @@ int main(int /*argc*/, char** /*argv*/) {
     if (test.second == true) {
         EdgeDescriptor ed = test.first;
         const EdgeProperty&  ep = graph[ed];
-        std::cout << "vertex 0 and 2 connected by an edge with weight " << ep.weight << std::endl;
+        std::cout << "vertex 0 and 2 are connected by an edge with weight " << ep.weight << std::endl;
      }
     else
         std::cout << "vertex 0 and 2 are not connected by an edge." << std::endl;
@@ -145,7 +145,7 @@ int main(int /*argc*/, char** /*argv*/) {
     if (test.second == true) {
         EdgeDescriptor ed = test.first;
         const EdgeProperty&  ep = graph[ed];
-        std::cout << "vertex 1 and 2 connected by an edge with weight " << ep.weight << std::endl;
+        std::cout << "vertex 1 and 2 are connected by an edge with weight " << ep.weight << std::endl;
      }
     else
         std::cout << "vertex 1 and 2 are not connected by an edge." << std::endl;
