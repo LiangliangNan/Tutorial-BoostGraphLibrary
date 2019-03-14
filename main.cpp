@@ -127,7 +127,10 @@ int main(int /*argc*/, char** /*argv*/) {
     std::cout << "target vertex of the edge: " << t_vp.name << std::endl;
 
     //-----------------------------------------------------------------------
-    //  check if two vertices are connected by an edge
+    //  query the edge for a vertex pair.
+    //  If the second element of the returned value is true, the edge exists and the first
+    //  element carries the edge descriptor.
+    //  If the second element of the returned value is false, the edge does not exists.
     //-----------------------------------------------------------------------
     std::pair<EdgeDescriptor, bool> test = boost::edge(vd0, vd2, graph);
     if (test.second == true) {
