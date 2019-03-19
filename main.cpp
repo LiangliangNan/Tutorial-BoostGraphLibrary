@@ -70,18 +70,18 @@ int main(int /*argc*/, char** /*argv*/) {
     std::pair<EdgeDescriptor, bool> status01 = boost::add_edge(vd0, vd1, ep01, graph);
     EdgeDescriptor ed01 = status01.first; // this is how to access the returned edge descriptor
     if (status01.second)
-        std::cout << "edge " << ed01 << " added connecting " << vd0 << " and " << vd1 << std::endl;
+        std::cout << "added edge " << ed01 << " connecting vertices " << vd0 << " and " << vd1 << std::endl;
     else
-        std::cout << "failed to add an edge connecting " << vd0 << " and " << vd1 << std::endl;
+        std::cout << "failed to add an edge connecting vertices" << vd0 << " and " << vd1 << std::endl;
 
     EdgeProperty ep12; // the edge connecting vertex 1 and 2
     ep12.weight = 20.0f;
     std::pair<EdgeDescriptor, bool> status12 = boost::add_edge(vd1, vd2, ep12, graph);
     EdgeDescriptor ed12 = status12.first; // this is how to access the returned edge descriptor
     if (status12.second)
-        std::cout << "edge " << ed12 << " added connecting " << vd1 << " and " << vd2 << std::endl;
+        std::cout << "added edge " << ed12 << " connecting vertices " << vd1 << " and " << vd2 << std::endl;
     else
-        std::cout << "failed to add an edge connecting " << vd1 << " and " << vd2 << std::endl;
+        std::cout << "failed to add an edge connecting vertices" << vd1 << " and " << vd2 << std::endl;
 
     //-----------------------------------------------------------------------
     //  query the number of vertices in a graph
